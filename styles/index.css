@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "Qatar-Bold";
+    src: url("../fonts/Qatar2022Arabic-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Qatar";
+    src: url("../fonts/Qatar2022Arabic-Heavy.ttf");
+}
+
+* {
+    font-family: "Qatar-Bold";
+}
+
+html {
+    background: url('../img/bg.png') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+h1#title {
+    color: white;
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 6vh;
+    margin-bottom: 1vh;
+}
+
+h2#date {
+    color: white;
+    font-size: 3.5vh;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.line-1 {
+    height: 3px;
+    background: white;
+    max-width: 15%;
+    margin: 0 auto;
+}
+
+.game-container {
+    margin: auto 2vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.game-info {
+    width: 45%;
+    margin-top: 8vh;
+}
+
+.game-item {
+    background-color: #f2f2f2;
+    border-radius: 8vh;
+    border: solid 5px #7e003c;
+}
+
+.game-teams {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 3vh 1vw;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.center-item-detail {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.center-item-detail .center-container {
+    position: relative;
+    color: white;
+}
+
+.center-item-detail .center-container.center-container-top {
+    top: 2vh;
+}
+
+.center-item-detail .center-container.center-container-bottom {
+    top: -2vh;
+}
+
+.center-item-detail .center-container .center-item-info {
+    border-radius: 5vh;
+    background-color: #460222;
+}
+
+.center-item-detail .center-container .center-item-info .group-game {
+    display: inline-block;
+    font-family: 'Qatar';
+    background-color: #7e003c;
+    padding: 4px 12px;
+    border-radius: 5vh;
+    font-size: 2vh;
+}
+
+.center-item-detail .center-container .center-item-info .hour-game {
+    display: inline-block;
+    font-family: 'Qatar';
+    padding: 1px 10px 1px 2px;
+    font-size: 2vh;
+}
+
+.center-item-detail .center-container .center-item-info .stadium-name {
+    background-color: white;
+    color: #7e003c;
+    font-family: 'Qatar';
+    padding: 0vh 1vw;
+    border: 2px solid #7e003c;
+    border-radius: 50px;
+    font-size: 2vh;
+}
+
+.team {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.home-team {
+    justify-content: end;
+}
+
+.away-team {
+    justify-content: start;
+}
+
+.separator {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.separator span {
+    color: black;
+    font-size: 5vh;
+}
+
+.team .country-name {
+    color: black;
+    font-size: 8vh;
+    padding: 0 1vw;
+}
+
+.team .flag-country {
+    width: 8vh;
+    height: 8vh;
+    object-fit: cover;
+    border: solid 6px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white),
+        linear-gradient(to bottom, #fefefe, #d8d8d8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+@media only screen and (max-width: 1080px) {
+
+    html {
+        background-image: url('../img/bg-large.png');
+    }
+
+    h1#title {
+        font-size: 6vh;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
+
+    h2#date {
+        color: white;
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    .game-teams {
+        padding: 1vh 1vw;
+    }
+
+    .game-info {
+        width: 75%;
+        margin-top: 2vh;
+    }
+
+    .team .flag-country {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .game-score .score {
+        font-size: 3vh;
+    }
+
+    .game-score .separator {
+        font-size: 2vh;
+    }
+
+    .team .country-name {
+        font-size: 4vh;
+    }
+
+}
